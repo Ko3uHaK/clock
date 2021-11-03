@@ -3,11 +3,11 @@ const clockContainer = document.querySelector('.js-clock'),
 
 function getTime(){
     const date = new Date();
-    const minutes = date.getMinutes;
-    const hours = date.getHours;
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
     clockTitle.innerHTML = `${hours}:${minutes}`; 
 }
 function init(){
-
+    getTime()
 }
 init();
