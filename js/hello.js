@@ -1,6 +1,6 @@
 const form = document.querySelector('.js-form'),
     input = form.querySelector('input'),
-    hello = document.querySelector('js-hello');
+    hello = document.querySelector('.js-hello');
 const USER_LS = 'curentUsername',
     SHOWING_CN = 'showing';
 function submitHandler(event){
