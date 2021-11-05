@@ -3,6 +3,11 @@ const form = document.querySelector('.js-form'),
     hello = document.querySelector('js-hello');
 const USER_LS = 'curentUsername',
     SHOWING_CN = 'showing';
+function submitHandler(event){
+        event.preventDefault();
+        const inputValue = input.value;
+        showHello(inputValue);
+}
 function showHello(text){
     hello.innerText = `Привет, ${text}`;
     hello.classList.add(SHOWING_CN);
@@ -10,6 +15,7 @@ function showHello(text){
 }
 function askForUsername(){
     form.classList.add(SHOWING_CN);
+    form.addEventListener('submit', submitHandler);
 }
 function loadUsername(){
     const curentUsername=localStorage.getItem(USER_LS);
