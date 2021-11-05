@@ -5,9 +5,12 @@ function getTime(){
     const date = new Date();
     const minutes = date.getMinutes();
     const hours = date.getHours();
-    clockTitle.innerHTML = `${hours}:${minutes}`; 
+    const seconds = date.getSeconds();
+    clockTitle.innerHTML = `${hours}:${minutes}:${seconds}`; 
 }
 function init(){
     getTime()
+    setInterval(getTime,1);
 }
+
 init();
