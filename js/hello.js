@@ -10,12 +10,12 @@ function submitHandler(event){
         event.preventDefault();
         const inputValue = input.value;
         showHello(inputValue);
+        saveUsername(inputValue);
 }
 function showHello(text){
     hello.innerText = `Привет, ${text}`;
     hello.classList.add(SHOWING_CN);
     form.classList.remove(SHOWING_CN); 
-    
 }
 function askForUsername(){
     form.classList.add(SHOWING_CN);
