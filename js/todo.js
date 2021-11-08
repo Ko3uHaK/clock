@@ -15,7 +15,7 @@ function showToDo(text){
 
 function submitHandler(event){
     event.preventDefault();
-    const currentValue = toDoForm.value;
+    const currentValue = toDoInput.value;
     showToDo(currentValue);
 }
 
