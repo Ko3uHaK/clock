@@ -10,7 +10,14 @@ const TODO_LS ='toDo';
       }
 
 function showToDo(text){
-    console.log(text);
+    const li = document.createElement('li');
+    const delBtn = document.createElement('delBtn');
+    const span = document.createElement('span');
+    delBtn.innerHTML ='❌';
+    span.innerText =text;
+    li.appendChild(delBtn);
+    li.appendChild(span);
+    toDoList.appendChild(li);
 }
 
 function submitHandler(event){
