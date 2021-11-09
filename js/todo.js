@@ -6,7 +6,10 @@ const toDos =[];
       function loadToDo(){
           const todo = localStorage.getItem(TODO_LS);
           if(todo !== null){
-
+            const parseToDo = JSON.parse(todo);
+            parseToDo.forEach(function(toDo){
+                showToDo(toDo.name);
+            });
           }
       }
 
