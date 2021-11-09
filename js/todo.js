@@ -12,16 +12,18 @@ const toDos =[];
 
 function showToDo(text){
     const li = document.createElement('li');
-    const delBtn = document.createElement('delBtn');
+    const delBtn = document.createElement('button');
     const span = document.createElement('span');
+    const newId = toDos.length +1;
     delBtn.innerHTML ='❌';
     span.innerText =text;
     li.appendChild(delBtn);
     li.appendChild(span);
+    li.id = newId;
     toDoList.appendChild(li);
     const toDoobj ={
         name: text,
-        id: toDos.length +1
+        id: newId
     };
     toDos.push(toDoobj);
 }
