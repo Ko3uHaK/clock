@@ -10,6 +10,10 @@ const toDos =[];
           }
       }
 
+      function saveToDo(){
+          localStorage.setItem(TODO_LS, toDos);
+      }
+
 function showToDo(text){
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
@@ -26,6 +30,7 @@ function showToDo(text){
         id: newId
     };
     toDos.push(toDoobj);
+    saveToDo();
 }
 
 function submitHandler(event){
