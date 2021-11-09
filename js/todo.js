@@ -11,7 +11,7 @@ const toDos =[];
       }
 
       function saveToDo(){
-          localStorage.setItem(TODO_LS, toDos);
+          localStorage.setItem(TODO_LS, JSON.stringify(toDos));
       }
 
 function showToDo(text){
