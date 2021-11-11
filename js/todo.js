@@ -2,7 +2,7 @@ const toDoForm = document.querySelector('.js-toDoForm'),
       toDoInput = toDoForm.querySelector('input'),
       toDoList = document.querySelector(".js-toDoList");
 const TODO_LS ='toDo';
-const toDos =[];
+let toDos =[];
       function loadToDo(){
           const todo = localStorage.getItem(TODO_LS);
           if(todo !== null){
@@ -23,8 +23,10 @@ const toDos =[];
         const li =btn.parentNode;
         toDoList.removeChild(li);
         const cleanTodo = toDos.filter(function(toDo){
-          return toDo.id !== li.id;  
+          return toDo.id !== parseInt(li.id); 
         });
+        toDos = cleanTodo; 
+        saveToDo();
       }
 function showToDo(text){
     const li = document.createElement('li');
@@ -33,7 +35,7 @@ function showToDo(text){
     const newId = toDos.length +1;
     delBtn.innerHTML ='❌';
     delBtn.addEventListener('click',  deleteToDo);
-    span.innerText =text;
+    span.innerText =text; 
     li.appendChild(delBtn);
     li.appendChild(span);
     li.id = newId;
