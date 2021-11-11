@@ -17,12 +17,16 @@ const toDos =[];
           localStorage.setItem(TODO_LS, JSON.stringify(toDos));
       }
 
+      function deleteToDo(event){
+
+      }
 function showToDo(text){
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
     const span = document.createElement('span');
     const newId = toDos.length +1;
     delBtn.innerHTML ='❌';
+    delBtn.addEventListener('click',  deleteToDo);
     span.innerText =text;
     li.appendChild(delBtn);
     li.appendChild(span);
