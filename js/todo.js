@@ -16,15 +16,15 @@ const toDos =[];
       function saveToDo(){
           localStorage.setItem(TODO_LS, JSON.stringify(toDos));
       }
-      function filter(toDo){
-        
+      function filterFn(toDo){
+        return toDo.id === 1;  
       }
 
       function deleteToDo(event){
         const btn = event.target;
         const li =btn.parentNode;
         toDoList.removeChild(li);
-        const cleanTodo = toDos.filter();
+        const cleanTodo = toDos.filter(filterFn);
       }
 function showToDo(text){
     const li = document.createElement('li');
