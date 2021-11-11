@@ -18,7 +18,9 @@ const toDos =[];
       }
 
       function deleteToDo(event){
-
+        const btn = event.target;
+        const li =btn.parentNode;
+        toDoList.removeChild(li);
       }
 function showToDo(text){
     const li = document.createElement('li');
