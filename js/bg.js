@@ -1,8 +1,10 @@
 const body = document.querySelector("body");
 const imgNumber = 3;
 
-function showImage(randomNamber) {
-
+function showImage(number) {
+    const img =new Image();
+    img.src =`img/${number}.jpg`;
+    body.appendChild(img);
 }
 
 function getRandom() {
@@ -15,3 +17,4 @@ function init() {
   showImage(randomNumber);
 }
 init();
+ 
