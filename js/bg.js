@@ -5,7 +5,7 @@ function showImage(number) {
     const img =new Image();
     img.src =`img/${number}.jpg`;
     img.classList.add('bgImage');
-    body.appendChild(img);
+    body.prepend(img);
 }
 
 function getRandom() {

@@ -4,6 +4,13 @@
 .showing{
     display: block;
 }
+@keyframes fadein{
+    from {
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
 .bgImage{
     position: absolute;
     width: 100%;
@@ -11,4 +18,5 @@
     top: 0px;
     left: 0px;
     z-index: -1;
+    animation: fadein 1s linear;
 }
