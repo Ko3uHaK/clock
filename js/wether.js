@@ -1,6 +1,12 @@
 const COORDS_LS = "co0rds";
 
+function geoSuccessHandler(position){
 
+}
+
+function geoErrorHandler(){
+    
+}
 
 function askForCoords(){
     navigator.geolocation.getCurrentPosition()
