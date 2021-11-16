@@ -32,6 +32,7 @@ function getCoords() {
     askForCoords();
   } else {
       const loadedCoords = JSON.parse(coords);
+      getWether(loadedCoords.latitude, loadedCoords.longitude);
   }
 }
 
