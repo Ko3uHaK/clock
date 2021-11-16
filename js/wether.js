@@ -1,25 +1,24 @@
-const COORDS_LS = "coords";
+const COORDS_LS = "coords",
+  API_KEY = "847633b9fcbea4c7f750a788b3cd735c";
 
-function saveCoords(positionObj){
-    localStorage.setItem(COORDS_LS, JSON.stringify(positionObj));
+function saveCoords(positionObj) {
+  localStorage.setItem(COORDS_LS, JSON.stringify(positionObj));
 }
 
-function geoSuccessHandler(position){
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const positionObj ={
-        latitude : latitude,
-        longitude : longitude,
-    };
-    saveCoords();
+function geoSuccessHandler(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  const positionObj = {
+    latitude: latitude,
+    longitude: longitude,
+  };
+  saveCoords();
 }
 
-function geoErrorHandler(){
+function geoErrorHandler() {}
 
-}
-
-function askForCoords(){
-    navigator.geolocation.getCurrentPosition(geoSuccessHandler, geoErrorHandler);
+function askForCoords() {
+  navigator.geolocation.getCurrentPosition(geoSuccessHandler, geoErrorHandler);
 }
 
 function getCoords() {
